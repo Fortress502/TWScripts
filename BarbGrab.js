@@ -1,5 +1,4 @@
 javascript:
-//barbarian finder by Sophie "Shinko to Kuma"
 
 if (window.location.href.indexOf('map') < 0) {
     window.location.assign(game_data.link_base_pure + "map");
@@ -162,12 +161,6 @@ else {
           </tr>
         </table>
         <hr>
-        <center><img class="tooltip-delayed" title="Sophie -Shinko to Kuma-" src="https://dl.dropboxusercontent.com/s/0do4be4rzef4j30/sophie2.gif" style="cursor:help; position: relative"></center>
-        <br>
-        <center>
-        <p><font color="${titleColor}">Creator: </font><a href="https://forum.tribalwars.net/index.php?members/shinko-to-kuma.121220/" style="text-shadow:-1px -1px 0 ${titleColor},1px -1px 0 ${titleColor},-1px 1px 0 ${titleColor},1px 1px 0 ${titleColor};" title="Sophie profile" target="_blank">Sophie "Shinko to Kuma"</a>
-        </p>
-        </center>
         </div>`;
 
         $("#minimap_whole").before(fakeHtml);
@@ -203,7 +196,7 @@ else {
         var coordinateHome = currentVillX + "|" + currentVillY;
         for (k = 0; k < inRangeBarb.length; k++) {
             target = inRangeBarb[k].targetX + "|" + inRangeBarb[k].targetY;
-            distance.push(target, calculateDistance(target, coordinateHome))
+            distance.push(calculateDistance(target, coordinateHome) + " " + target)
         }
         console.table(distance);
     }
